@@ -1,6 +1,8 @@
 <?php
+    $first_time = time();
     include 'private/curl.php';
     include 'private/game_init.php'
+    
     // echo '<pre>';
     // var_dump($data);
     // echo '</pre>';
@@ -25,6 +27,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Poké api</title>
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png" type="image/png">
 </head>
 <body>
     <?php foreach($choices as $pokemon):?>
@@ -48,6 +51,9 @@
             }
         ?>
     <?php endforeach ?>
-
+    <?php
+        $secont_time = time();
+        echo 'temps d\'excution'.($secont_time-$first_time);
+    ?>
 </body>
 </html>

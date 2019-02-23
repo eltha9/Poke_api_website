@@ -7,6 +7,7 @@
 
     for($i=0; $i<20; $i++){
         $sprite_able = false;
+        $duplicated = false;
         $temp = $data->results[rand(0,($data->count-1))] ;
 
         $data_poke= to_curl($temp->url);
@@ -19,13 +20,21 @@
             }
 
         }
-        if($sprite_able){
+        foreach($choices as $pokemon){
+            if($temp == $pokemon){
+                $duplicated = true;
+                break;
+            }
+        }
+
+
+        if($sprite_able && !$duplicated){
             array_push($choices, $temp);
         }else{
             $i--;
         }
     }
-    var_dump($choices);
+
     
 
 ?>
