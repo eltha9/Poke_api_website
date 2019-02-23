@@ -1,24 +1,8 @@
 <?php
     $first_time = time();
     include 'private/curl.php';
-    include 'private/game_init.php'
+    include 'private/game_init.php';
     
-    // echo '<pre>';
-    // var_dump($data);
-    // echo '</pre>';
-    // $data = json_decode(to_curl($data->sprites));
-
-    // $keys = array_keys((array)$data->sprites);
-
-    // foreach($keys as $sprite){
-    //     if($data->sprites->$sprite != NULL){
-
-    //         echo '<img src="'.$data->sprites->$sprite.'" title="'.$sprite.'">';
-    //     }
-
-    // }
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +18,7 @@
         <p><?= $pokemon->name ?></p><br>
 
         <?php 
-            $data_poke= to_curl($pokemon->url);
+            $data_poke= cached($pokemon->url);
             $data_poke = json_decode($data_poke);
             $keys = array_keys((array)$data_poke->sprites);
             $temp = false;
@@ -53,7 +37,7 @@
     <?php endforeach ?>
     <?php
         $secont_time = time();
-        echo 'temps d\'excution'.($secont_time-$first_time);
+        echo 'temps d\'excution '.($secont_time-$first_time).'s';
     ?>
 </body>
 </html>
