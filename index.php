@@ -18,7 +18,7 @@
         <p><?= $pokemon->name ?></p><br>
 
         <?php 
-            $data_poke= cached($pokemon->url);
+            $data_poke= to_curl($pokemon->url);
             $data_poke = json_decode($data_poke);
             $keys = array_keys((array)$data_poke->sprites);
             $temp = false;
