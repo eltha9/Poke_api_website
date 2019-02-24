@@ -403,3 +403,5 @@ healthchecksdb
 
 config.ini
 .htaccess
+test.php
+cache/*

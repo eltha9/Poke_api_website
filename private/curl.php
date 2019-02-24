@@ -11,6 +11,9 @@ function to_curl($url){
     $data= curl_exec($curl);
     curl_close($curl);
 
+    $url= CACHE_LOCATION.md5($url);
+    to_cache($url, $data);
+
     return $data;
 }
 // appeler à chaque requete
