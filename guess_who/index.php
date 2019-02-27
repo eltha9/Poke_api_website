@@ -1,7 +1,7 @@
 <?php
     $first_time = time();
-    include 'private/curl.php';
-    include 'private/game_init.php';
+    include '../private/curl.php';
+    include '../private/game_init.php';
     
 ?>
 <!DOCTYPE html>

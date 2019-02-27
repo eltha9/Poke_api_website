@@ -404,4 +404,4 @@ healthchecksdb
 config.ini
 .htaccess
 test.php
-cache/*
+guess_who/cache/*
