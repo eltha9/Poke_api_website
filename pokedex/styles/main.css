@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+    font-family: 'Space Mono', monospace;
+}
+
+/* 
+    HEADER
+*/
+header{
+    text-align: center;
+    margin-bottom: 40px;
+    background-color: #ef5350;
+}
+header a{
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+header a img{
+    width: 100%;
+    /* height: 20%; */
+}
+
+/* 
+    MAIN
+*/
+main{
+    width: 70vw;
+    margin: 0 auto;
+}
+
+/* FORMULAIRE CHOICE */
+main .content-list ul{
+    list-style-type: none;
+    padding-left: 10px;
+}
+main .content-list h2{
+    margin: 0;
+    margin-bottom: 6px;
+}
+main .content-list .sub-list{
+    margin-bottom: 10px;
+}
+main .content-list li{
+    font-weight: bold;
+    display: block;
+}
+main .content-list .sub-list li:hover img{
+    display: block;
+}
+main .content-list .sub-list li{
+    position: relative;
+}
+main .content-list .sub-list li img{
+    display: none;
+    width: 0.5rem;
+    position: absolute;
+    left: -12px;
+    top:25%;
+}
+main .content-list .sub-list li img.show{
+    display: block;
+}
+
+/* FORMULAIRE */
