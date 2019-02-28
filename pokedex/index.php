@@ -21,7 +21,7 @@
                     <h2>Liste Pokémon</h2>
                 </li>
                 <ul class="sub-list">
-                    <li>Mode numérique <img src="./images/right_arrow.png" alt="" class="arrow "></li>
+                    <li class="mode-numerique">Mode numérique <img src="./images/right_arrow.png" alt="" class="arrow "></li>
                    
                 </ul>
                 <li>
@@ -48,8 +48,15 @@
             </ul>
 
         </section>
-
+        <!-- formulaire section -->
         <section class="content-form">
+            <!-- mode numérique -->
+            <div class="mode-numerique-content form">
+                <ol type="1" start="1">
+                    
+                </ol>
+            </div>
+
 
         </section>
     </main>

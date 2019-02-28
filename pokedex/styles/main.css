@@ -1,6 +1,8 @@
 body{
     margin: 0;
     font-family: 'Space Mono', monospace;
+
+
 }
 
 /* 
@@ -27,9 +29,15 @@ header a img{
 main{
     width: 70vw;
     margin: 0 auto;
+    display: flex;
+    height: 70vh;
 }
 
 /* FORMULAIRE CHOICE */
+main .content-list{
+    width: 50%;
+    background-color: grey;
+}
 main .content-list ul{
     list-style-type: none;
     padding-left: 10px;
@@ -50,6 +58,8 @@ main .content-list .sub-list li:hover img{
 }
 main .content-list .sub-list li{
     position: relative;
+    display: table;
+    cursor: pointer;
 }
 main .content-list .sub-list li img{
     display: none;
@@ -63,3 +73,16 @@ main .content-list .sub-list li img.show{
 }
 
 /* FORMULAIRE */
+main .content-form{
+    width: 50%;
+    background-color: green;
+    overflow: scroll;
+    padding: 0 20px;
+}
+
+main .content-form .form{
+    display: none;
+}
+main .content-form .show{
+    display: block;
+}
