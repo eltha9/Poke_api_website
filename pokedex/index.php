@@ -31,7 +31,7 @@
                     <li>Champs <img src="./images/right_arrow.png" alt="" class="arrow "></li>
                     <li>Forêts <img src="./images/right_arrow.png" alt="" class="arrow "></li>
                     <li>Montagne <img src="./images/right_arrow.png" alt="" class="arrow "></li>
-                    <li>Milieux Hostile <img src="./images/right_arrow.png" alt="" class="arrow "></li>
+                    <li>Milieux Hostiles <img src="./images/right_arrow.png" alt="" class="arrow "></li>
                     <li>Maré-cage <img src="./images/right_arrow.png" alt="" class="arrow "></li>
                     <li>Urbains <img src="./images/right_arrow.png" alt="" class="arrow "></li>
                     <li>Pokémon rare <img src="./images/right_arrow.png" alt="" class="arrow "></li>
