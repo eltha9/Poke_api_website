@@ -76,7 +76,7 @@ main .content-list .sub-list li img.show{
 main .content-form{
     width: 50%;
     background-color: green;
-    overflow: scroll;
+    overflow-y: scroll;
     padding: 0 20px;
 }
 
@@ -85,4 +85,15 @@ main .content-form .form{
 }
 main .content-form .show{
     display: block;
+}
+
+main .content-form .mode-numerique-content ol{
+    margin-bottom: 0;
+}
+main .content-form .mode-numerique-content ol li a{
+    text-decoration: none;
+    color: black;
+}
+main .content-form .mode-numerique-content ol li a:hover{
+    font-weight: bold;
 }

@@ -10,6 +10,6 @@ if(!empty($_GET)){
     $i= $offset;
     foreach($data->results as $pokemon){
         $i++;
-        echo '<li data-id="'.$i.'">'.$pokemon->name.'</li>';
+        echo '<li data-id="'.$i.'"><a href="pokemon.php/?pokemon='.$pokemon->name.'">'.ucfirst($pokemon->name).'</a></li>';
     }
 }
