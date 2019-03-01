@@ -1,3 +1,12 @@
+<?php
+include '../private/curl.php';
+
+$data = to_curl('https://pokeapi.co/api/v2/type');
+$data = json_decode($data);
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,23 +36,23 @@
                 <li>
                     <h2>Habitats Pokémon</h2>
                 </li>
-                <ul class="sub-list">
-                    <li>Champs <img src="./images/right_arrow.png" alt="" class="arrow "></li>
-                    <li>Forêts <img src="./images/right_arrow.png" alt="" class="arrow "></li>
-                    <li>Montagne <img src="./images/right_arrow.png" alt="" class="arrow "></li>
-                    <li>Milieux Hostiles <img src="./images/right_arrow.png" alt="" class="arrow "></li>
-                    <li>Maré-cage <img src="./images/right_arrow.png" alt="" class="arrow "></li>
-                    <li>Urbains <img src="./images/right_arrow.png" alt="" class="arrow "></li>
-                    <li>Pokémon rare <img src="./images/right_arrow.png" alt="" class="arrow "></li>
+                <ul class="sub-list habitats">
+                    <li data-type="grassland">Champs <img src="./images/right_arrow.png" alt="" class="arrow "></li>
+                    <li data-type="forest">Forêts <img src="./images/right_arrow.png" alt="" class="arrow "></li>
+                    <li data-type="montain">Montagne <img src="./images/right_arrow.png" alt="" class="arrow "></li>
+                    <li data-type="rough-terrain">Milieux Hostiles <img src="./images/right_arrow.png" alt="" class="arrow "></li>
+                    <li data-type="cave">Cave <img src="./images/right_arrow.png" alt="" class="arrow "></li>
+                    <li data-type="sea">Mer <img src="./images/right_arrow.png" alt="" class="arrow "></li>
+                    <li data-type="waters-edge">Maré-cage <img src="./images/right_arrow.png" alt="" class="arrow "></li>
+                    <li data-type="urban">Urbains <img src="./images/right_arrow.png" alt="" class="arrow "></li>
+                    <li data-type="rare">Pokémon rare <img src="./images/right_arrow.png" alt="" class="arrow "></li>
                 </ul>
                 <li>
                     <h2>Recherche</h2>
                 </li>
                 <ul class="sub-list">
-                    <li>Mode A à Z <img src="./images/right_arrow.png" alt="" class="arrow "></li>
-                    <li>Type <img src="./images/right_arrow.png" alt="" class="arrow "></li>
-                    <li>Mode + - leger  <img src="./images/right_arrow.png" alt="" class="arrow "></li>
-                    <li>Mode + - petit <img src="./images/right_arrow.png" alt="" class="arrow "></li>
+                    <li class="search">Mode A à Z <img src="./images/right_arrow.png" alt="" class="arrow "></li>
+                    <li class="type">Type <img src="./images/right_arrow.png" alt="" class="arrow "></li>
                 </ul>
             </ul>
 
@@ -57,7 +66,32 @@
                 </ol>
             </div>
 
+            <!-- Habitats div -->
+            <div class="mode-habitats-content form">
+                <ol type="1" start="1">
+                    
+                </ol>
+            </div>
+            
+            <!-- search div -->
+            <div class="mode-search-content form">
+                <input type="text" class="input-search">
+                <ol type="1" start="1">
+                    
+                </ol>  
+            </div>
 
+            <!-- type div -->
+            <div class="mode-type-content form">
+                <select name="" id="">
+                    <?php
+                        foreach($data->results as $type){
+                            echo '<option value="'.$type->name.'">'.$type->name.'</option>';
+                        }
+                    ?>
+                </select>
+                <button>Go</button>
+            </div>
         </section>
     </main>
 

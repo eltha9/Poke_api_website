@@ -51,5 +51,4 @@ function by_name($key){
         
     }
 }
-echo 'prout';
-by_name('bas');
+
