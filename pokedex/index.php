@@ -39,7 +39,7 @@ $data = json_decode($data);
                 <ul class="sub-list habitats">
                     <li data-type="grassland">Champs <img src="./images/right_arrow.png" alt="" class="arrow "></li>
                     <li data-type="forest">Forêts <img src="./images/right_arrow.png" alt="" class="arrow "></li>
-                    <li data-type="montain">Montagne <img src="./images/right_arrow.png" alt="" class="arrow "></li>
+                    <li data-type="mountain">Montagne <img src="./images/right_arrow.png" alt="" class="arrow "></li>
                     <li data-type="rough-terrain">Milieux Hostiles <img src="./images/right_arrow.png" alt="" class="arrow "></li>
                     <li data-type="cave">Cave <img src="./images/right_arrow.png" alt="" class="arrow "></li>
                     <li data-type="sea">Mer <img src="./images/right_arrow.png" alt="" class="arrow "></li>
@@ -76,9 +76,9 @@ $data = json_decode($data);
             <!-- search div -->
             <div class="mode-search-content form">
                 <input type="text" class="input-search">
-                <ol type="1" start="1">
+                <ul>
                     
-                </ol>  
+                </ul>  
             </div>
 
             <!-- type div -->

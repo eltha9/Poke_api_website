@@ -1,6 +1,6 @@
 const arrow = document.querySelectorAll('.arrow')
 const li = document.querySelectorAll('main .content-list .sub-list li')
-const forms = document.querySelector('.content-form .form')
+const forms = document.querySelectorAll('.content-form .form')
 
 // varriable of each type of search button
 const numerique = document.querySelector('.mode-numerique')
@@ -21,7 +21,7 @@ const form_node = {
     },
     search: {
         node: main_form.querySelector('.mode-search-content'),
-        ol: main_form.querySelector('.mode-search-content ol'),
+        ol: main_form.querySelector('.mode-search-content ul'),
         input: main_form.querySelector('.mode-search-content input')
     },
     type: {
@@ -36,9 +36,9 @@ const form_node = {
 
 
 // style function
-let global_toggle = (tab)=>{
+let global_toggle = (tab, param)=>{
     tab.forEach(element => {
-        if(element.classList[1] == 'show'){
+        if(element.classList[param] == 'show'){
             element.classList.toggle('show')
         }
     });
@@ -106,11 +106,11 @@ let type_mode= (key)=>{
 
 //numerique events
 numerique.addEventListener('click',()=>{
-    global_toggle(arrow)
+    global_toggle(arrow, 1)
     arrow[0].classList.toggle('show')
     
     numerique_mode(offset)
-    
+    global_toggle(forms, 2)
     form_node.numerique_mode.node.classList.toggle('show')
 })
 
@@ -132,19 +132,21 @@ numerique.addEventListener('click',()=>{
 //habitats events
 for(let i=0; i<habitats.length; i++){
     habitats[i].addEventListener('click', ()=>{
-        global_toggle(arrow)
+        global_toggle(arrow, 1)
         arrow[1+i].classList.toggle('show')
         
         habitat_mode(habitats[i].dataset.type)
+        global_toggle(forms, 2)
         form_node.habitat.node.classList.toggle('show')
     })
 }
 
 //search events
 search.addEventListener('click',()=>{
-    global_toggle(arrow)
+    global_toggle(arrow, 1)
     arrow[10].classList.toggle('show')
 
+    global_toggle(forms, 2)
     form_node.search.node.classList.toggle('show')
     
 })
@@ -152,19 +154,24 @@ search.addEventListener('click',()=>{
 form_node.search.input.addEventListener('keyup',()=>{
     
     let search_key = form_node.search.input.value
-    search_mode(search_key)
+    if(search_key != ''){
+        search_mode(search_key)
+    }
 })
 
 //type events
 type.addEventListener('click',()=>{
-    global_toggle(arrow)
+    global_toggle(arrow, 1)
     arrow[11].classList.toggle('show')
     
+    global_toggle(forms, 2)
     form_node.type.node.classList.toggle('show')
 })
 
 form_node.type.button.addEventListener('click', ()=>{
     let key = form_node.type.select.value
-    type_mode(key)
+    if(key != ''){
+        type_mode(key)
+    }
 
 })
