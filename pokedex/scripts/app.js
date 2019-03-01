@@ -13,20 +13,20 @@ const main_form = document.querySelector('.content-form')
 const form_node = {
     numerique_mode : {
         node: main_form.querySelector('.mode-numerique-content'),
-        ol: main_form.querySelector('.mode-numerique-content ol')
+        list: main_form.querySelector('.mode-numerique-content ol')
     },
     habitat: {
         node: main_form.querySelector('.mode-habitats-content'),
-        ol: main_form.querySelector('.mode-habitats-content ol')
+        list: main_form.querySelector('.mode-habitats-content ul')
     },
     search: {
         node: main_form.querySelector('.mode-search-content'),
-        ol: main_form.querySelector('.mode-search-content ul'),
+        list: main_form.querySelector('.mode-search-content ul'),
         input: main_form.querySelector('.mode-search-content input')
     },
     type: {
         node: main_form.querySelector('.mode-type-content'),
-        ol: main_form.querySelector('.mode-type-content ol'),
+        list: main_form.querySelector('.mode-type-content ul'),
         button : main_form.querySelector('.mode-type-content button'),
         select : main_form.querySelector('.mode-type-content select')
     },
@@ -60,7 +60,7 @@ let numerique_mode = (offset)=>{
         return _response.text()
     })
     .then((response)=>{ 
-        form_node.numerique_mode.ol.innerHTML += response    
+        form_node.numerique_mode.list.innerHTML += response    
         
     })
 }
@@ -73,7 +73,7 @@ let habitat_mode = (habitat)=>{
         return _response.text()
     })
     .then((response)=>{ 
-        form_node.habitat.ol.innerHTML = response    
+        form_node.habitat.list.innerHTML = response    
         
     })
 }
@@ -85,7 +85,7 @@ let search_mode= (key)=>{
         return _response.text()
     })
     .then((response)=>{ 
-        form_node.search.ol.innerHTML = response    
+        form_node.search.list.innerHTML = response    
         
     })
 }
@@ -97,7 +97,7 @@ let type_mode= (key)=>{
         return _response.text()
     })
     .then((response)=>{ 
-        form_node.type.ol.innerHTML = response    
+        form_node.type.list.innerHTML = response    
         
     })
 }

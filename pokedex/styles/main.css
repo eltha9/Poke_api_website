@@ -36,7 +36,7 @@ main{
 /* FORMULAIRE CHOICE */
 main .content-list{
     width: 50%;
-    /* background-color: grey; */
+    
 }
 main .content-list ul{
     list-style-type: none;
@@ -75,7 +75,7 @@ main .content-list .sub-list li img.show{
 /* FORMULAIRE */
 main .content-form{
     width: 50%;
-    /* background-color: green; */
+    
     overflow-y: scroll;
     padding: 0 20px;
 }
@@ -87,13 +87,17 @@ main .content-form .show{
     display: block;
 }
 
-main .content-form .mode-numerique-content ol{
+main .content-form ol,main .content-form ul{
     margin-bottom: 0;
 }
-main .content-form .mode-numerique-content ol li a{
+main .content-form li a{
     text-decoration: none;
     color: black;
 }
-main .content-form .mode-numerique-content ol li a:hover{
+main .content-form  li a:hover{
     font-weight: bold;
+}
+
+main .content-form ul{
+    list-style-type: none;
 }

@@ -68,9 +68,9 @@ $data = json_decode($data);
 
             <!-- Habitats div -->
             <div class="mode-habitats-content form">
-                <ol type="1" start="1">
+                <ul>
                     
-                </ol>
+                </ul>
             </div>
             
             <!-- search div -->
@@ -91,6 +91,9 @@ $data = json_decode($data);
                     ?>
                 </select>
                 <button>Go</button>
+                <ul>
+                    
+                    </ul>
             </div>
         </section>
     </main>
