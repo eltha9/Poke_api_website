@@ -31,7 +31,7 @@ function by_name($key){
     $data= to_curl($url);
     $data= json_decode($data);
     $result= [];
-
+    $key = strtolower($key);
 
     foreach($data->results as $pokemon){
         array_push($pokemon_list, $pokemon->name);
@@ -50,9 +50,9 @@ function by_name($key){
         }
     }
     
-    foreach($pokemon_list as $pokemon){
+    foreach($pokemon_list as $nb=>$pokemon){
         if($pokemon != NULL){
-            echo '<li><a href="pokemon.php?pokemon='.$pokemon.'">'.$pokemon.'</a></li>';
+            echo '<li value="'.$nb.'"><a href="pokemon.php?pokemon='.$pokemon.'">'.$pokemon.'</a></li>';
         }
         
     }

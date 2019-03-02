@@ -13,7 +13,8 @@ const main_form = document.querySelector('.content-form')
 const form_node = {
     numerique_mode : {
         node: main_form.querySelector('.mode-numerique-content'),
-        list: main_form.querySelector('.mode-numerique-content ol')
+        list: main_form.querySelector('.mode-numerique-content ol'),
+        button: main_form.querySelector('.mode-numerique-content button')
     },
     habitat: {
         node: main_form.querySelector('.mode-habitats-content'),
@@ -21,7 +22,7 @@ const form_node = {
     },
     search: {
         node: main_form.querySelector('.mode-search-content'),
-        list: main_form.querySelector('.mode-search-content ul'),
+        list: main_form.querySelector('.mode-search-content ol'),
         input: main_form.querySelector('.mode-search-content input')
     },
     type: {
@@ -60,6 +61,10 @@ let numerique_mode = (offset)=>{
         return _response.text()
     })
     .then((response)=>{ 
+        
+        if(response == ''){
+            form_node.numerique_mode.button.remove()
+        }
         form_node.numerique_mode.list.innerHTML += response    
         
     })
@@ -114,18 +119,12 @@ numerique.addEventListener('click',()=>{
     form_node.numerique_mode.node.classList.toggle('show')
 })
 
-// test part
-// let last = 0
-// window.addEventListener('wheel',(event)=>{
-//     const rect = form_node.numerique_mode.node.getBoundingClientRect()
-//     if(last === rect.bottom){
-//         numerique_mode(offset)
-//         offset += 30
-//     }else{
-//         last = rect.bottom
-//     }
+form_node.numerique_mode.button.addEventListener('click',()=>{
+    
+    numerique_mode(offset)
+    offset += 30
 
-// })
+})
 
 
 
@@ -151,10 +150,10 @@ search.addEventListener('click',()=>{
     
 })
 
-form_node.search.input.addEventListener('keyup',()=>{
+form_node.search.input.addEventListener('keyup',(event)=>{
     
     let search_key = form_node.search.input.value
-    if(search_key != ''){
+    if(search_key != '' && ( (event.keyCode>=65 && event.keyCode<=90)|| (event.keyCode>=97 && event.keyCode<=122) )){
         search_mode(search_key)
     }
 })

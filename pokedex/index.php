@@ -64,6 +64,7 @@ $data = json_decode($data);
                 <ol type="1" start="1">
                     
                 </ol>
+                <button>Charger plus</button>
             </div>
 
             <!-- Habitats div -->
@@ -76,9 +77,9 @@ $data = json_decode($data);
             <!-- search div -->
             <div class="mode-search-content form">
                 <input type="text" class="input-search">
-                <ul>
+                <ol type="1" start="1">
                     
-                </ul>  
+                </ol>  
             </div>
 
             <!-- type div -->
@@ -93,7 +94,7 @@ $data = json_decode($data);
                 <button>Go</button>
                 <ul>
                     
-                    </ul>
+                </ul>
             </div>
         </section>
     </main>

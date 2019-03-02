@@ -101,3 +101,6 @@ main .content-form  li a:hover{
 main .content-form ul{
     list-style-type: none;
 }
+main button{
+    cursor: pointer;
+}
