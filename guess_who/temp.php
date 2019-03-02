@@ -1,7 +1,8 @@
 <?php
     $first_time = time();
+    $cache = '../cache/';
     include '../private/curl.php';
-    include '../private/game_init.php';
+    include 'private/game_init.php';
     
 ?>
 <!DOCTYPE html>
@@ -18,8 +19,8 @@
         <p><?= $pokemon->name ?></p><br>
 
         <?php 
-            $data_poke= to_curl($pokemon->url);
-            $data_poke = json_decode($data_poke);
+            $data_poke= to_curl($pokemon->url, $cache);
+            
             $keys = array_keys((array)$data_poke->sprites);
             $temp = false;
             foreach($keys as $sprite){

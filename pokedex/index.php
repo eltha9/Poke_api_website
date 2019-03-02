@@ -1,8 +1,8 @@
 <?php
 include '../private/curl.php';
+$cache = '../cache/';
+$data = to_curl('https://pokeapi.co/api/v2/type', $cache);
 
-$data = to_curl('https://pokeapi.co/api/v2/type');
-$data = json_decode($data);
 
 
 

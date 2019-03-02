@@ -1,7 +1,6 @@
 <?php
-    $data =to_curl('https://pokeapi.co/api/v2/pokemon?offset=0&limit=1000');
+    $data =to_curl('https://pokeapi.co/api/v2/pokemon?offset=0&limit=1000', $cache);
 
-    $data = json_decode($data);
     
     $choices= [];
 
@@ -10,8 +9,8 @@
         $duplicated = false;
         $temp = $data->results[rand(0,($data->count-1))] ;
 
-        $data_poke= to_curl($temp->url);
-        $data_poke = json_decode($data_poke);
+        $data_poke= to_curl($temp->url, $cache);
+       
         $keys = array_keys((array)$data_poke->sprites);
         foreach($keys as $sprite){
 

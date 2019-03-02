@@ -1,22 +1,22 @@
 <?php
 include '../../private/curl.php';
+$cache = '../../cache/';
 
 // search by location area
-function habitat($location){
+function habitat($location, $cache){
     $url= 'https://pokeapi.co/api/v2/pokemon-habitat/'.$location;
-    $data=to_curl($url);
-    $data = json_decode($data);
-
+    $data=to_curl($url, $cache);
+    
     foreach($data->pokemon_species as $pokemon){
         echo '<li><a href="pokemon.php?pokemon='.$pokemon->name.'">'.$pokemon->name.'</a></li>';
     }
 }
 
 //search by pokemon type (some types doesn't have pokmein)
-function type($location){
+function type($location, $cache){
     $url= 'https://pokeapi.co/api/v2/type/'.$location;
-    $data=to_curl($url);
-    $data = json_decode($data);
+    $data=to_curl($url, $cache);
+
 
     foreach($data->pokemon as $pokemon){
         echo '<li><a href="pokemon.php?pokemon='.$pokemon->pokemon->name.'">'.$pokemon->pokemon->name.'</a></li>';
@@ -24,12 +24,12 @@ function type($location){
 }
 
 // search function por pokemon
-function by_name($key){
+function by_name($key, $cache){
     $url='https://pokeapi.co/api/v2/pokemon?offset=0&limit=964';
 
     $pokemon_list = [];
-    $data= to_curl($url);
-    $data= json_decode($data);
+    $data= to_curl($url, $cache);
+
     $result= [];
     $key = strtolower($key);
 
@@ -64,7 +64,7 @@ if(!empty($_GET)){
     if(array_key_exists('habitat', $_GET)){
         $value = htmlspecialchars($_GET['habitat']);
         if(is_string($value)){
-            habitat($value);
+            habitat($value, $cache);
         }else{
             echo 'error';
         }
@@ -73,7 +73,7 @@ if(!empty($_GET)){
         
         $value = htmlspecialchars($_GET['search']);
         if(is_string($value)){
-            by_name($value);
+            by_name($value, $cache);
         }else{
             echo 'error';
         }
@@ -82,7 +82,7 @@ if(!empty($_GET)){
         $value = htmlspecialchars($_GET['type']);
         
         if(is_string($value)){
-            type($value);
+            type($value, $cache);
         }else{
             echo 'error';
         }   

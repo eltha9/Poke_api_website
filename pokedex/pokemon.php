@@ -1,11 +1,12 @@
 <?php
 
 include '../private/curl.php';
+$cache = '../cache/';
 if(!empty($_GET)){
     $pokemon = $_GET['pokemon'];
 
-    $data = to_curl('https://pokeapi.co/api/v2/pokemon/'.$pokemon);
-    $data = json_decode($data);
+    $data = to_curl('https://pokeapi.co/api/v2/pokemon/'.$pokemon , $cache);
+    
 }else{
     // header('location: ./error.html');
 }
