@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    font-family: 'Space Mono', monospace;
 }
 
 /* 
@@ -24,14 +25,15 @@ header a img{
     MAIN
 */
 main{
-    width: 60vw;
+    width: 50vw;
     margin: 0 auto;
+    
 }
 .games{
     width: 100%;
     display: flex;
     justify-content: space-around;
-    
+    margin-bottom: 4vh; 
 }
 
 main .games a{
@@ -43,6 +45,11 @@ main .games a{
     color: black;
     text-align: center;
 }
+main .games a img{
+    width: 100%;
+    margin-top: 15%;
+}
+
 main .game .hover-game{
     position: absolute;
     width: 100%;
@@ -58,12 +65,44 @@ main .game .hover-game{
 main .game .hover-game p{
     margin: auto;
     transition: all ease-out 0.3s;
+    font-weight: bold;
 }
 
 main .games .game:hover .hover-game p{
-    transform: translateZ(300px);
+    transform: translateZ(200px);
     color: red;
 }
 main .games .game:hover .hover-game{
     background-color: rgba(153, 153, 153,0.8);
+}
+
+/* 
+    EXPLENATION SECTION PART
+*/
+section .explain{
+    margin-bottom: 40px;
+}
+section p{
+    margin-top: 5px;
+}
+section h3{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/* 
+    FOOTER
+*/
+footer{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: white;
+    background-color: #000;
+    height: 3vh;
+    width: 100%;
+}
+footer div{
+    font-size: 0.8rem;
+    margin: 0 auto;
+    width: 60vw;
 }
