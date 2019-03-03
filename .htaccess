@@ -1,0 +1,18 @@
+Options -Indexes
+
+<Files "readme.md">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+<Directory "private/">
+    Order Allow,Deny
+    Deny from all
+    Options -Indexes
+</Directory>
+<Directory "./cache/">
+    Order Allow,Deny
+    Deny from all
+    Options -Indexes
+</Directory>
+

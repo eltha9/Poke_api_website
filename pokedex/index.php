@@ -17,6 +17,7 @@ $data = to_curl('https://pokeapi.co/api/v2/type', $cache);
     <link rel="stylesheet" href="styles/main.css">
 
     <link href="https://fonts.googleapis.com/css?family=Space+Mono:400,700&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+    <link rel="shortcut icon" href="../favicon.png" type="image/png">
 </head>
 <body>
     <header>

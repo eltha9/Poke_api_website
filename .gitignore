@@ -401,6 +401,5 @@ healthchecksdb
 # End of https://www.gitignore.io/api/macos,linux,visualstudio,visualstudiocode
 
 config.ini
-.htaccess
 test.php
 cache/*

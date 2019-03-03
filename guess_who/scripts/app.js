@@ -33,6 +33,7 @@ let submit = (name,id)=>{
             win.addEventListener('load', ()=>{
                 
                 win_div.appendChild(win)
+                win_div.classList.add('show')
                 visual_data.response.innerHTML += '<p>Bravo tu as deviné</p>'
             })
             win.src= `${response}`
