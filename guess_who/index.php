@@ -1,10 +1,16 @@
+<?php
+$cache = '../cache/';
+include '../private/curl.php';
+include './private/game_init.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Qui est ce ? </title>
     <link rel="stylesheet" href="styles/home.css">
 
     <link href="https://fonts.googleapis.com/css?family=Space+Mono:400,700&amp;subset=latin-ext,vietnamese" rel="stylesheet">
@@ -27,7 +33,23 @@
         </section>
         
         <section class="content">
+            <?php foreach($choices as $pokemon): ?>
+            <div class="pokemon" data-name="<?= $pokemon->name?>">
+                <div class="pokemon-info">
+                    <?php
+                        $temp_data = to_curl($pokemon->url, $cache)
+                    ?>
+                    <img src="<?= $temp_data->sprites->front_default?>" alt="Devant <?= $pokemon->name?>" title="<?= $pokemon->name?>">
+                    <h4><?= ucfirst($pokemon->name) ?></h4>
+                </div>
+                <div class="pokemon-buttons">
+                    <button class="submit">Proposer</button>
+                    <button class="kill">Cacher</button>
+                </div>
+                <div class="pokemon hide "></div>
+            </div>
 
+            <?php endforeach; ?>
         </section>
 
     </main>

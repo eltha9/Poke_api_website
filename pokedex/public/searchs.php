@@ -52,7 +52,7 @@ function by_name($key, $cache){
     
     foreach($pokemon_list as $nb=>$pokemon){
         if($pokemon != NULL){
-            echo '<li value="'.$nb.'"><a href="pokemon.php?pokemon='.$pokemon.'">'.$pokemon.'</a></li>';
+            echo '<li value="'.($nb+1).'"><a href="pokemon.php?pokemon='.$pokemon.'">'.$pokemon.'</a></li>';
         }
         
     }

@@ -50,5 +50,75 @@ section.content{
     width: 100%;
     height: 40vh;
     bottom: 0;
-    background-color: green;
+    /* background-color: green; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+section.content .pokemon{
+    width: 9.5vw;
+    height: 49%;
+    /* background-color: orange; */
+
+    border: 1px solid black;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+}
+section.content .pokemon.hide{
+    position: absolute;
+    background-color: black;
+    opacity: 0;
+    top:0;
+    height: 100%;
+    display: none;
+    z-index: 10;
+}
+
+section.content .pokemon.hide.show{
+    display: block;
+    opacity: 0.8;
+}
+
+section.content .pokemon .pokemon-info{
+    text-align: center;
+    width: 100%;
+    height: 60%;
+    position: relative;
+}
+
+section.content .pokemon .pokemon-info h4{
+    margin: 0;
+    margin-top: 2px;
+    position: absolute;
+    top: 0;
+    font-size: 0.8rem;
+}
+
+section.content .pokemon .pokemon-info img{
+    display: block;
+    width: 100%;
+    z-index: -1;
+}
+
+
+
+section.content .pokemon .pokemon-buttons{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+}
+
+section.content .pokemon .pokemon-buttons button{
+    width: 50%;
+    height: 100%;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(165,165,165, 0.2);
+}
+section.content .pokemon .pokemon-buttons button:hover{
+    background-color: rgba(165,165,165, 0.5);
 }
