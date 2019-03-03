@@ -9,14 +9,38 @@ const pokeball= new Element3d(canvasWidth, canvasHeight,windowPercent, "mtl", '.
 window.addEventListener('resize', ()=>{
     pokeball.resize()
 })
-//  FUNCTION
-let submit = (name)=>{
 
+// GLOBAL VARRIABLE
+const game_id = document.querySelector('main').dataset.gameId
+
+const visual_data={
+    question: document.querySelector('.info.question'),
+    response: document.querySelector('.info.response'),
+}
+//  FUNCTION
+let submit = (name,id)=>{
+    fetch(`./public/check.php?id=${id}&aws=${name}`)
+    .then((_response)=>{
+        return _response.text()
+    })
+    .then((response)=>{
+        if(response === ''){
+            visual_data.response.innerHTML += 'Oh bah mince c\'est pas lui =/'
+        }else{
+            
+        }
+    })
 }
 
 // function for the question
-let ask = (question) =>{
-
+let ask = (question, id) =>{
+    fetch(`./public/respons.php?id=${id}&q=${question}`)
+    .then((_response)=>{
+        return _response.text()
+    })
+    .then((response)=>{
+        visual_data.response.innerHTML += response
+    })
 }
 
 
@@ -33,11 +57,22 @@ for(let i=0; i<pokemon_node.length; i++){
     const name = pokemon_node[i].dataset.name
 
     buttons.submit.addEventListener('click', ()=>{
-        submit(name)
+        submit(name, game_id)
     })
 
     buttons.kill.addEventListener('click', ()=>{
         hide_div.classList.toggle('show')
     })
 
+}
+
+
+// question events
+const question_buttons = visual_data.question.querySelectorAll('button')
+
+for(let i=0; i< question_buttons.length; i++){
+    question_buttons[i].addEventListener('click', ()=>{
+        
+        ask(question_buttons[i].dataset.targetId, game_id)
+    })
 }

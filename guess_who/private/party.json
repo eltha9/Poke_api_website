@@ -1,0 +1,14 @@
+[
+    {
+        "id": "308eed3c3ce141fea163ea345ffddfae",
+        "guess": "blissey",
+        "data": {
+            "color": "pink",
+            "baby": false,
+            "type": [
+                "normal"
+            ]
+        },
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/242.png"
+    }
+]

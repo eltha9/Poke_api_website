@@ -37,11 +37,35 @@ section.pokeball{
 
 section.pokeball div.info{
     position: absolute;
-    top:0;
-    right:0;
     width: 20%;
     height: 100%;
     background-color: blue;
+    top:0;
+}
+section.pokeball div.info.question{
+    left:0;
+
+}
+section.pokeball div.info.question button{
+    display: block;
+    height: calc(100%/3);
+    width: 100%;
+    cursor: pointer;
+    background-color: rgba(165,165,165, 0.2);
+    border: none;
+}
+section.pokeball div.info.question button:hover{
+    background-color: rgba(165,165,165, 0.7);
+}
+
+section.pokeball div.info.response{
+    right: 0;
+    overflow-y: scroll;
+    font-size: 0.8rem;
+}
+section.pokeball div.info.response ul{
+    list-style: none;
+    padding: 20px;
 }
 
 /* content section */
@@ -120,5 +144,5 @@ section.content .pokemon .pokemon-buttons button{
     background-color: rgba(165,165,165, 0.2);
 }
 section.content .pokemon .pokemon-buttons button:hover{
-    background-color: rgba(165,165,165, 0.5);
+    background-color: rgba(165,165,165, 0.7);
 }

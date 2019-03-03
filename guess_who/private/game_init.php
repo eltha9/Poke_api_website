@@ -39,4 +39,37 @@
         $choices[rand(0, (count($choices)-1 ) )] = $to_guess;
     }
 
-file_put_contents('value.txt', $to_guess->name);
+
+$party = file_get_contents('./private/party.json');
+$party = json_decode($party);
+$temp_party= new stdClass();
+$temp_party->id = md5(time().$_SERVER['REMOTE_ADDR']);
+$temp_party->guess = $to_guess->name;
+
+
+$temp_party->data = new stdClass();
+$color = to_curl($to_guess->url, $cache);
+$temp_party->sprite = $color->sprites->front_default;
+
+
+$color = to_curl($color->species->url, $cache);
+
+$temp_party->data->color = $color->color->name;
+$temp_party->data->baby = $color->is_baby;
+
+$types = [];
+$type_guess = to_curl($to_guess->url, $cache);
+foreach($type_guess->types as $type){
+    array_push($types, $type->type->name);
+}
+
+$temp_party->data->type = $types;
+
+array_push($party, $temp_party);
+
+$party = json_encode($party);
+file_put_contents('./private/party.json', $party);
+
+
+$question = file_get_contents('./private/question.json');
+$question = json_decode($question);

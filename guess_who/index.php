@@ -19,17 +19,19 @@ include './private/game_init.php';
     <header>
         <a href="../index.html" title="home"><img src="http://cdn.elph.fr/logo-6221638601ef7fa7c835eae08ef67a16.png" alt="pokéapi games"></a>
     </header>
-    <main>
+    <main data-game-id="<?= $temp_party->id?>">
         <section class="pokeball">
             
-            <div class="info">
-                <div class="question">
-
-                </div>
-                <div class="reponse">
-                    
-                </div>
-            </div>
+          
+        <div class="info question">
+            <?php foreach($question as $question):?>
+            <button data-target-id="<?= $question->id?>"><?= $question->question?></button>
+            <?php endforeach?>
+        </div>
+        <div class="info response">
+            
+        </div>
+           
         </section>
         
         <section class="content">

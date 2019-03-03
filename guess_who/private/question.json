@@ -1,0 +1,17 @@
+[
+    {
+        "id": 0,
+        "question":"Couleur ?",
+        "target": "color"
+    },
+    {
+        "id": 1,
+        "question":"Bébé ?",
+        "target": "baby"
+    },
+    {
+        "id": 2,
+        "question":"Type ?",
+        "target": "type"
+    }
+]
