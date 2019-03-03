@@ -403,3 +403,4 @@ healthchecksdb
 config.ini
 test.php
 cache/*
+!cache/.gitkeep
