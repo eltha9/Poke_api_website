@@ -17,6 +17,7 @@ const visual_data={
     question: document.querySelector('.info.question'),
     response: document.querySelector('.info.response'),
 }
+
 //  FUNCTION
 let submit = (name,id)=>{
     fetch(`./public/check.php?id=${id}&aws=${name}`)
@@ -25,8 +26,16 @@ let submit = (name,id)=>{
     })
     .then((response)=>{
         if(response === ''){
-            visual_data.response.innerHTML += 'Oh bah mince c\'est pas lui =/'
+            visual_data.response.innerHTML += '<p>Oh bah mince c\'est pas lui =/</p>'
         }else{
+            const win_div= document.querySelector('.win')
+            let win = new Image
+            win.addEventListener('load', ()=>{
+                
+                win_div.appendChild(win)
+                visual_data.response.innerHTML += '<p>Bravo tu as deviné</p>'
+            })
+            win.src= `${response}`
             
         }
     })

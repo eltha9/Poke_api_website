@@ -4,6 +4,7 @@ body{
     position: relative;
     width: 100%;
     height: 100vh;
+    overflow: hidden;
 }
 
 /* 
@@ -39,7 +40,6 @@ section.pokeball div.info{
     position: absolute;
     width: 20%;
     height: 100%;
-    background-color: blue;
     top:0;
 }
 section.pokeball div.info.question{
@@ -145,4 +145,17 @@ section.content .pokemon .pokemon-buttons button{
 }
 section.content .pokemon .pokemon-buttons button:hover{
     background-color: rgba(165,165,165, 0.7);
+}
+
+section.pokeball .win{
+    position: absolute;
+    height: 100%;
+    width: 40%;
+    margin-left: 50%;
+    transform-origin: 50% 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+section.pokeball .win img{
+    width: 100%;
 }

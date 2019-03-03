@@ -31,7 +31,7 @@ include './private/game_init.php';
         <div class="info response">
             
         </div>
-           
+        <div class="win"></div>
         </section>
         
         <section class="content">
