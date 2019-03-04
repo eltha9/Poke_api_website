@@ -151,7 +151,7 @@ search.addEventListener('click',()=>{
 })
 let last_key = ''
 form_node.search.input.addEventListener('keyup',(event)=>{
-    
+    console.log(event.keyCode)
     let search_key = form_node.search.input.value
     if(search_key != '' && ( (event.keyCode>=65 && event.keyCode<=90)|| (event.keyCode>=97 && event.keyCode<=122) )){
         search_mode(search_key)
@@ -159,6 +159,10 @@ form_node.search.input.addEventListener('keyup',(event)=>{
     }
     if((event.keyCode == 13) && (last_key != search_key)){
         search_mode(search_key)
+    }
+    if(search_key != '' && event.keyCode ==8){
+        search_mode(search_key)
+
     }
 })
 
