@@ -1,1 +1,262 @@
-[{"id":"08723995e84a5c10d0461e73e5966a97","guess":"solgaleo","data":{"color":"white","baby":false,"type":["steel","psychic"]},"sprite":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/791.png"},{"id":"fa095c43877870db00e1364ba06f0106","guess":"klink","data":{"color":"gray","baby":false,"type":["steel"]},"sprite":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/599.png"},{"id":"e7141372246e5bda12cacd34d67962d8","guess":"raticate-alola","data":{"color":"brown","baby":false,"type":["normal","dark"]},"sprite":null},{"id":"1f22eaa28e62bf8810d4ddb8a3a66b5c","guess":"venusaur","data":{"color":"green","baby":false,"type":["poison","grass"]},"sprite":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/3.png"},{"id":"a58ac744fc2a4af2753eb550f0e28985","guess":"tornadus-therian","data":{"color":"green","baby":false,"type":["flying"]},"sprite":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/10019.png"},{"id":"547bf2859eb2601f686bedf7196fa283","guess":"geodude","data":{"color":"brown","baby":false,"type":["ground","rock"]},"sprite":"https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/74.png"}]
+[{
+    "id": "08723995e84a5c10d0461e73e5966a97",
+    "guess": "solgaleo",
+    "data": {
+        "color": "white",
+        "baby": false,
+        "type": ["steel", "psychic"]
+    },
+    "sprite": "https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/791.png"
+}, {
+    "id": "fa095c43877870db00e1364ba06f0106",
+    "guess": "klink",
+    "data": {
+        "color": "gray",
+        "baby": false,
+        "type": ["steel"]
+    },
+    "sprite": "https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/599.png"
+}, {
+    "id": "e7141372246e5bda12cacd34d67962d8",
+    "guess": "raticate-alola",
+    "data": {
+        "color": "brown",
+        "baby": false,
+        "type": ["normal", "dark"]
+    },
+    "sprite": null
+}, {
+    "id": "1f22eaa28e62bf8810d4ddb8a3a66b5c",
+    "guess": "venusaur",
+    "data": {
+        "color": "green",
+        "baby": false,
+        "type": ["poison", "grass"]
+    },
+    "sprite": "https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/3.png"
+}, {
+    "id": "a58ac744fc2a4af2753eb550f0e28985",
+    "guess": "tornadus-therian",
+    "data": {
+        "color": "green",
+        "baby": false,
+        "type": ["flying"]
+    },
+    "sprite": "https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/10019.png"
+}, {
+    "id": "547bf2859eb2601f686bedf7196fa283",
+    "guess": "geodude",
+    "data": {
+        "color": "brown",
+        "baby": false,
+        "type": ["ground", "rock"]
+    },
+    "sprite": "https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/74.png"
+}, {
+    "id": "e795b39cde91c8a12a2594cf1212c65e",
+    "guess": "bidoof",
+    "data": {
+        "color": "brown",
+        "baby": false,
+        "type": ["normal"]
+    },
+    "sprite": "https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/399.png"
+}, {
+    "id": "1244c2b908da78a3b1ccabefc5eb38ae",
+    "guess": "ponyta",
+    "data": {
+        "color": "yellow",
+        "baby": false,
+        "type": ["fire"]
+    },
+    "sprite": "https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/77.png"
+}, {
+    "id": "cbdee3eb42c57e575596a49c02b5b480",
+    "guess": "poliwrath",
+    "data": {
+        "color": "blue",
+        "baby": false,
+        "type": ["fighting", "water"]
+    },
+    "sprite": "https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/62.png"
+}, {
+    "id": "a306938c6a6a6ef3c5f0e75958ea73c2",
+    "guess": "oddish",
+    "data": {
+        "color": "blue",
+        "baby": false,
+        "type": ["poison", "grass"]
+    },
+    "sprite": "https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/43.png"
+}, {
+    "id": "7f2c53af14e8e48601277515d932e7d2",
+    "guess": "sewaddle",
+    "data": {
+        "color": "yellow",
+        "baby": false,
+        "type": ["grass", "bug"]
+    },
+    "sprite": "https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/540.png"
+}, {
+    "id": "6160df5ecc4bf1c19fdacddc7bf70757",
+    "guess": "gligar",
+    "data": {
+        "color": "purple",
+        "baby": false,
+        "type": ["flying", "ground"]
+    },
+    "sprite": "https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/207.png"
+}, {
+    "id": "2af3a39a0244811356c78bbf40db22d1",
+    "guess": "dustox",
+    "data": {
+        "color": "green",
+        "baby": false,
+        "type": ["poison", "bug"]
+    },
+    "sprite": "https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/269.png"
+}, {
+    "id": "6e7d277e1a51212c7215fadf9745ad34",
+    "guess": "burmy",
+    "data": {
+        "color": "green",
+        "baby": false,
+        "type": ["bug"]
+    },
+    "sprite": "https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/412.png"
+}, {
+    "id": "70d4b412caf37ed9fbda4fd5c57b5320",
+    "guess": "paras",
+    "data": {
+        "color": "red",
+        "baby": false,
+        "type": ["grass", "bug"]
+    },
+    "sprite": "https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/46.png"
+}, {
+    "id": "8c290a49fada9f39a623d3173467f299",
+    "guess": "breloom",
+    "data": {
+        "color": "green",
+        "baby": false,
+        "type": ["fighting", "grass"]
+    },
+    "sprite": "https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/286.png"
+}, {
+    "id": "8a32231a70fba11f64b8a9d005ab863d",
+    "guess": "scraggy",
+    "data": {
+        "color": "yellow",
+        "baby": false,
+        "type": ["fighting", "dark"]
+    },
+    "sprite": "https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/559.png"
+}, {
+    "id": "51a779f102dbf2c6d8227d233c61a8f8",
+    "guess": "tynamo",
+    "data": {
+        "color": "white",
+        "baby": false,
+        "type": ["electric"]
+    },
+    "sprite": "https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/602.png"
+}, {
+    "id": "784efd156b8817e274b79bba6fc4a07d",
+    "guess": "slakoth",
+    "data": {
+        "color": "brown",
+        "baby": false,
+        "type": ["normal"]
+    },
+    "sprite": "https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/287.png"
+}, {
+    "id": "b7d6027c52e93c90c759873f0fc89188",
+    "guess": "vanillish",
+    "data": {
+        "color": "white",
+        "baby": false,
+        "type": ["ice"]
+    },
+    "sprite": "https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/583.png"
+}, {
+    "id": "7e32f998d74b08b8faa98b8c979e51da",
+    "guess": "mantyke",
+    "data": {
+        "color": "blue",
+        "baby": true,
+        "type": ["flying", "water"]
+    },
+    "sprite": "https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/458.png"
+}, {
+    "id": "4fe665fe2c291e857774df000e35feee",
+    "guess": "frogadier",
+    "data": {
+        "color": "blue",
+        "baby": false,
+        "type": ["water"]
+    },
+    "sprite": "https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/657.png"
+}, {
+    "id": "fda99bf6655834368d70acf97620674e",
+    "guess": "braviary",
+    "data": {
+        "color": "red",
+        "baby": false,
+        "type": ["flying", "normal"]
+    },
+    "sprite": "https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/628.png"
+}, {
+    "id": "0625e1dd1ad48afa3ecafd667e91b244",
+    "guess": "mewtwo",
+    "data": {
+        "color": "purple",
+        "baby": false,
+        "type": ["psychic"]
+    },
+    "sprite": "https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/150.png"
+}, {
+    "id": "1b468513a70cc24f05dc3c322cc884f6",
+    "guess": "sandshrew-alola",
+    "data": {
+        "color": "yellow",
+        "baby": false,
+        "type": ["steel", "ice"]
+    },
+    "sprite": null
+}, {
+    "id": "796e0aa779e917d726e60a53052657d5",
+    "guess": "igglybuff",
+    "data": {
+        "color": "pink",
+        "baby": true,
+        "type": ["fairy", "normal"]
+    },
+    "sprite": "https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/174.png"
+}, {
+    "id": "b19843956573545be18f564433e2053a",
+    "guess": "dratini",
+    "data": {
+        "color": "blue",
+        "baby": false,
+        "type": ["dragon"]
+    },
+    "sprite": "https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/147.png"
+}, {
+    "id": "dc2f84b46d6fd107d79d0897acd02519",
+    "guess": "charizard-mega-x",
+    "data": {
+        "color": "red",
+        "baby": false,
+        "type": ["dragon", "fire"]
+    },
+    "sprite": "https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/10034.png"
+}, {
+    "id": "1d219690ccd725aa8f686e0b056cc624",
+    "guess": "herdier",
+    "data": {
+        "color": "gray",
+        "baby": false,
+        "type": ["normal"]
+    },
+    "sprite": "https:\/\/raw.githubusercontent.com\/PokeAPI\/sprites\/master\/sprites\/pokemon\/507.png"
+}]
